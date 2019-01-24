@@ -2,6 +2,8 @@ package pom;
 
 import static org.junit.Assert.*;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,6 +39,8 @@ public class OrderWithWait
 		selectedInformation.click();
 		
 		action.moveToElement(buyItem).click().perform();
+		
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		
 	}
 	
