@@ -59,7 +59,8 @@ public class LoginAndVerify
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		XSSFSheet sheet = workbook.getSheetAt(0);
 
-		for (int i = 1; i < sheet.getPhysicalNumberOfRows(); i++) {
+		for (int i = 1; i < sheet.getPhysicalNumberOfRows(); i++) 
+		{
 			Cell username = sheet.getRow(i).getCell(0);
 			Cell password = sheet.getRow(i).getCell(1);
 
@@ -87,7 +88,8 @@ public class LoginAndVerify
 			TestLogin.click();
 			
 			test.log(LogStatus.INFO, "Created User: " + user);
-			/*if(Success == Success.getAttribute("**Successful Login**")))
+			
+			/*if(Success.)
 			{
 				test.log(LogStatus.PASS, "Creating Users: " + user);
 			}
@@ -97,6 +99,7 @@ public class LoginAndVerify
 			}*/
 		}
 
+		workbook.close();
 		extent.endTest(test);
 		extent.flush();
 	}

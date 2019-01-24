@@ -24,8 +24,7 @@ import pom.LoginAndVerify;
 
 
 public class TestCaller {
-	
-	Constants path = new Constants();
+		
 	WebDriver driver;
 	Actions action;
 	
@@ -44,7 +43,7 @@ public class TestCaller {
 		test = extent.startTest("verify web page");*/
 		
 		driver.manage().window().maximize();
-		driver.get(path.URL1);
+		driver.get(Constants.URL1);
 		
 	}
 	
@@ -62,7 +61,7 @@ public class TestCaller {
 	public void methodTest()
 	{
 		driver.manage().window().maximize();
-		driver.get(path.URL1);
+		driver.get(Constants.URL1);
 		
 		//test.log(LogStatus.INFO, "Navigate and Maximize");
 	}
@@ -99,8 +98,6 @@ public class TestCaller {
 		/*WebElement success = driver.findElement(By.xpath
 				("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b"));
 		success.isDisplayed();*/
-		
-		
-		Thread.sleep(3000);
+			
 	}
 }
